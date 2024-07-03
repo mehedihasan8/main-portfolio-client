@@ -1,93 +1,59 @@
-import html from "../assets/html.png";
-import css from "../assets/css.png";
-import javascript from "../assets/javascript.png";
-import reactImage from "../assets/react.png";
-import tailwind from "../assets/tailwind.png";
-import bootstrap from "../assets/bootstrap.png";
-import nextjs from "../assets/nextjs.png";
-import mongodb from "../assets/mongodb.png";
-import node from "../assets/node.png";
-import github from "../assets/github.png";
-import figma from "../assets/figma.png";
-
 const Exprience = () => {
-  const techs = [
+  const frontendSkills = [
     {
-      id: 1,
-      src: html,
-      title: "HTML",
-      style: "shadow-orange-500",
-      scroll: "zoom-in-down",
+      skill: "Html",
+      percentage: 95,
     },
     {
-      id: 2,
-      src: css,
-      title: "CSS",
-      style: "shadow-blue-500",
-      scroll: "zoom-in-down",
+      skill: "Css",
+      percentage: 65,
     },
     {
-      id: 3,
-      src: javascript,
-      title: "JavaScript",
-      style: "shadow-yellow-500",
-      scroll: "zoom-in-down",
+      skill: "Material-UI",
+      percentage: 65,
     },
     {
-      id: 4,
-      src: reactImage,
-      title: "React JS",
-      style: "shadow-blue-600",
-      scroll: "zoom-in-down",
+      skill: "Ant-Design",
+      percentage: 65,
     },
     {
-      id: 5,
-      src: tailwind,
-      title: "Tailwind CSS",
-      style: "shadow-sky-400",
-      scroll: "zoom-in-up",
+      skill: "TypeScript",
+      percentage: 75,
     },
     {
-      id: 6,
-      src: bootstrap,
-      title: "Bootstrap",
-      style: "shadow-purple-800",
-      scroll: "zoom-in-up",
+      skill: "Javascript",
+      percentage: 75,
     },
     {
-      id: 7,
-      src: nextjs,
-      title: "Next JS",
-      style: "shadow-white",
-      scroll: "zoom-in-up",
+      skill: "React",
+      percentage: 65,
     },
     {
-      id: 8,
-      src: node,
-      title: "Node JS",
-      style: "shadow-green-400",
-      scroll: "zoom-in-up",
+      skill: "Next Js",
+      percentage: 75,
+    },
+  ];
+
+  const backendSkills = [
+    {
+      skill: "Node Js",
+      percentage: 95,
     },
     {
-      id: 9,
-      src: mongodb,
-      title: "MongoDB",
-      style: "shadow-green-400",
-      scroll: "zoom-in-up",
+      skill: "Express",
+      percentage: 65,
     },
     {
-      id: 10,
-      src: github,
-      title: "GitHub",
-      style: "shadow-gray-400",
-      scroll: "zoom-in-up",
+      skill: "Mongoose",
+      percentage: 75,
     },
     {
-      id: 11,
-      src: figma,
-      title: "Figma",
-      style: "shadow-red-600",
-      scroll: "zoom-in-up",
+      skill: "PostgreSQL",
+      percentage: 65,
+    },
+    {
+      skill: "Prisma",
+      percentage: 75,
     },
   ];
 
@@ -101,23 +67,66 @@ const Exprience = () => {
           <p className="text-4xl font-bold inline pt-0 md:pt-4  border-b-4 border-biol border-gray-500">
             Experience
           </p>
-          <p className="py-4 md:py-6">
-            These are the technologies I've worked with
-          </p>
+          <p className="py-2">These are the technologies I've worked with</p>
 
-          <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-8 text-center py-8 px-4 sm:px-0">
-            {techs.map(({ id, src, title, style, scroll }) => (
-              <div
-                key={id}
-                data-aos={scroll}
-                data-aos-duration="1500"
+          <div className="flex justify-between gap-10 pt-10 flex-col md:flex-row">
+            <div className="w-full md:w-2/4">
+              <h1
+                data-aos="zoom-in"
                 data-aos-easing="ease-in-out"
-                className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}
+                data-aos-duration="1500"
+                className="text-2xl pb-3 font-semibold"
               >
-                <img src={src} alt="" className="w-20 mx-auto" />
-                <p className="mt-4">{title}</p>
-              </div>
-            ))}
+                Front-End Skill
+              </h1>
+              {frontendSkills?.map((skill, i) => (
+                <div
+                  data-aos="zoom-in"
+                  data-aos-easing="ease-in-out"
+                  data-aos-duration="1500"
+                  key={i}
+                >
+                  <div className="flex items-center justify-between">
+                    <h1>{skill?.skill}</h1>
+                    <h1>{skill?.percentage}%</h1>
+                  </div>
+                  <progress
+                    className="progress progress-primary"
+                    value={skill?.percentage}
+                    max="100"
+                  ></progress>
+                </div>
+              ))}
+            </div>
+            <div className="w-full md:w-2/4">
+              <h1
+                data-aos="zoom-in"
+                data-aos-easing="ease-in-out"
+                data-aos-duration="1500"
+                className="text-2xl pb-3 font-semibold"
+              >
+                Back-End Skill
+              </h1>
+
+              {backendSkills?.map((skill, i) => (
+                <div
+                  data-aos="zoom-in"
+                  data-aos-easing="ease-in-out"
+                  data-aos-duration="1500"
+                  key={i}
+                >
+                  <div className="flex items-center justify-between">
+                    <h1>{skill?.skill}</h1>
+                    <h1>{skill?.percentage}%</h1>
+                  </div>
+                  <progress
+                    className="progress progress-primary"
+                    value={skill?.percentage}
+                    max="100"
+                  ></progress>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

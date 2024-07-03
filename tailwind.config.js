@@ -7,5 +7,8 @@ export default {
       signeture: ["Great Vibes"],
     },
   },
-  plugins: [],
+  plugins: [
+    // eslint-disable-next-line no-undef
+    require("daisyui"),
+  ],
 };

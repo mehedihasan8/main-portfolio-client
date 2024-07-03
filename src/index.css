@@ -11,3 +11,16 @@
     font-family: "Raleway", sans-serif;
   }
 }
+
+.progress-primary::-moz-progress-bar {
+  border-radius: var(--rounded-box, 1rem /* 16px */);
+  --tw-bg-opacity: 1;
+  background-color: red !important;
+}
+.progress-primary:indeterminate {
+  --progress-color: red !important;
+}
+.progress-primary::-webkit-progress-value {
+  --tw-bg-opacity: 1;
+  background-color: #06b6d4 !important;
+}

@@ -1,61 +1,13 @@
-const Exprience = () => {
-  const frontendSkills = [
-    {
-      skill: "Html",
-      percentage: 95,
-    },
-    {
-      skill: "Css",
-      percentage: 65,
-    },
-    {
-      skill: "Material-UI",
-      percentage: 65,
-    },
-    {
-      skill: "Ant-Design",
-      percentage: 65,
-    },
-    {
-      skill: "TypeScript",
-      percentage: 75,
-    },
-    {
-      skill: "Javascript",
-      percentage: 75,
-    },
-    {
-      skill: "React",
-      percentage: 65,
-    },
-    {
-      skill: "Next Js",
-      percentage: 75,
-    },
-  ];
+import { useEffect, useState } from "react";
 
-  const backendSkills = [
-    {
-      skill: "Node Js",
-      percentage: 95,
-    },
-    {
-      skill: "Express",
-      percentage: 65,
-    },
-    {
-      skill: "Mongoose",
-      percentage: 75,
-    },
-    {
-      skill: "PostgreSQL",
-      percentage: 65,
-    },
-    {
-      skill: "Prisma",
-      percentage: 75,
-    },
-  ];
+const Exprience = () => {
+  const [skills, setSkills] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/api/skill")
+      .then((res) => res.json())
+      .then((data) => setSkills(data?.data));
+  }, []);
 
   return (
     <div>
@@ -79,7 +31,7 @@ const Exprience = () => {
               >
                 Front-End Skill
               </h1>
-              {frontendSkills?.map((skill, i) => (
+              {skills?.getFrontendSkill?.map((skill, i) => (
                 <div
                   data-aos="zoom-in"
                   data-aos-easing="ease-in-out"
@@ -87,7 +39,7 @@ const Exprience = () => {
                   key={i}
                 >
                   <div className="flex items-center justify-between">
-                    <h1>{skill?.skill}</h1>
+                    <h1>{skill?.name}</h1>
                     <h1>{skill?.percentage}%</h1>
                   </div>
                   <progress
@@ -108,7 +60,7 @@ const Exprience = () => {
                 Back-End Skill
               </h1>
 
-              {backendSkills?.map((skill, i) => (
+              {skills?.getBackendSkill?.map((skill, i) => (
                 <div
                   data-aos="zoom-in"
                   data-aos-easing="ease-in-out"
@@ -116,7 +68,7 @@ const Exprience = () => {
                   key={i}
                 >
                   <div className="flex items-center justify-between">
-                    <h1>{skill?.skill}</h1>
+                    <h1>{skill?.name}</h1>
                     <h1>{skill?.percentage}%</h1>
                   </div>
                   <progress

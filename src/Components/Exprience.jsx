@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react";
+import { PiBriefcaseDuotone } from "react-icons/pi";
+import { MdCastForEducation } from "react-icons/md";
+import { RxCross2 } from "react-icons/rx";
 
 const Exprience = () => {
   const [skills, setSkills] = useState([]);
@@ -80,8 +83,75 @@ const Exprience = () => {
               ))}
             </div>
           </div>
+          <h1
+            data-aos="zoom-in"
+            data-aos-easing="ease-in-out"
+            data-aos-duration="1500"
+            onClick={() => document.getElementById("my_modal_3").showModal()}
+            className="px-5 border-2 cursor-pointer w-fit mx-auto mt-8 rounded text-cyan-500 border-sky-500 py-1 duration-200 font-semibold text-lg"
+          >
+            Experience & Education
+          </h1>
         </div>
       </div>
+
+      <dialog id="my_modal_3" className="modal">
+        <div className="modal-box py-4 max-w-[90vw] h-full">
+          <div className="flex items-center justify-between pt-2">
+            <h3 className="font-bold text-lg">Experience & Education!</h3>
+            <form method="dialog">
+              {/* if there is a button in form, it will close the modal */}
+              <button>
+                <RxCross2 size={26} />
+              </button>
+            </form>
+          </div>
+          <div className="flex justify-center flex-col md:flex-row gap-6 mt-6">
+            <div className="w-full md:w-[40%]">
+              <div className="flex gap-4">
+                <PiBriefcaseDuotone className="mt-1" size={26} />
+                <div>
+                  <h1>2024 - Present</h1>
+                  <p className="text-lg font-semibold mt-2">
+                    Web Application Developer - CodeCareBD
+                  </p>
+                  <p className="text-[17px] font-medium mt-2">
+                    Work as a Front-End Developer at CodeCareBD
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="w-full md:w-[60%]">
+              <div className="flex gap-4">
+                <MdCastForEducation className="mt-1" size={26} />
+                <div>
+                  <h1>Running</h1>
+                  <p className="text-lg font-semibold mt-2">
+                    CSE - University Of Scholars
+                  </p>
+                  <p className="text-[17px] font-medium mt-2">
+                    Studying Computer Science and Engineering at University Of
+                    Scholars
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4 mt-5">
+                <MdCastForEducation className="mt-1" size={26} />
+                <div>
+                  <h1>2019 - 2021</h1>
+                  <p className="text-lg font-semibold mt-2">
+                    HSC - Gazipur Mahanagar College (GMC)
+                  </p>
+                  <p className="text-[17px] font-medium mt-2">
+                    Studied Higher Secondary School Certificate at Gazipur
+                    Mahanagar College
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </dialog>
     </div>
   );
 };

@@ -11,9 +11,9 @@ const Services = () => {
   const serviceIProvide = [
     {
       id: 1,
-      title: "Mern Development",
+      title: "Full-Stack Development",
       description:
-        "I'm a MERN Developer .I can build your full stack website with MongoDB, ExpressJS, ReactJS, NodeJS. I can be your Mern Developer",
+        "I'm a Full-Stack Developer .I can build your full stack website with MongoDB, ExpressJS, ReactJS, NodeJS. I can be your Mern Developer",
       icon: (
         <>
           {/* <i className="fa-solid fa-layer-group"></i> */}
@@ -65,6 +65,18 @@ const Services = () => {
       icon: (
         <>
           <FaJsSquare />
+        </>
+      ),
+    },
+    {
+      id: 6,
+      title: "Mern Development",
+      description:
+        "I'm a MERN Developer .I can build your full stack website with MongoDB, ExpressJS, ReactJS, NodeJS. I can be your Mern Developer",
+      icon: (
+        <>
+          {/* <i className="fa-solid fa-layer-group"></i> */}
+          <FaLayerGroup />
         </>
       ),
     },

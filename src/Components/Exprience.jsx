@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useEffect, useState } from "react";
 import { PiBriefcaseDuotone } from "react-icons/pi";
 import { MdCastForEducation } from "react-icons/md";

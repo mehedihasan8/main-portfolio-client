@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { FaArrowRight } from "react-icons/fa";
 import image from "../assets/okay.jpg";
 import { Link } from "react-scroll";

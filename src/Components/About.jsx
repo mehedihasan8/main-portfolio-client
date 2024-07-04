@@ -32,7 +32,7 @@ const About = () => {
                   //
                   className="text-left text-base text-gray-300 w-full "
                 >
-                  Hi I am a Web Stack developer And I can build your website as
+                  Hi I am a Full Stack developer And I can build your website as
                   you want.
                   <br />
                   <br />

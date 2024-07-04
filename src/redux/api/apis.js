@@ -29,6 +29,18 @@ const allApis = baseApi.injectEndpoints({
       }),
       providesTags: ["projects"],
     }),
+    getSkills: build.query({
+      query: () => ({
+        url: "/skill",
+        method: "GET",
+      }),
+    }),
+    getExperience: build.query({
+      query: () => ({
+        url: "/experience",
+        method: "GET",
+      }),
+    }),
     getProject: build.query({
       query: (id) => ({
         url: `/projects/${id}`,
@@ -40,8 +52,10 @@ const allApis = baseApi.injectEndpoints({
 
 export const {
   useGetProfileQuery,
+  useGetExperienceQuery,
   useGetBlogsQuery,
   useGetBlogQuery,
   useGetProjectsQuery,
   useGetProjectQuery,
+  useGetSkillsQuery,
 } = allApis;

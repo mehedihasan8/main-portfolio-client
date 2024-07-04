@@ -2,7 +2,7 @@ import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="footer px-10 pb-16 pt-24 bg-black text-base-content border-base-300">
+    <div className=" px-10 pb-16 pt-24 bg-black text-base-content border-base-300">
       <div
         data-aos="fade-down"
         data-aos-duration="1500"
@@ -18,7 +18,7 @@ const Footer = () => {
           <h1 className="text-white md:text-left py-2 font-bold">Social</h1>
           <div className="flex space-x-4 items-center justify-center">
             <a
-              href="https://www.linkedin.com/in/mehedihasanfoysal8/"
+              href="https://www.linkedin.com/in/mehedihasanfoysal8"
               target="blank"
             >
               <FaLinkedin className="h-8 w-8 hover:text-sky-500 hover:-mt-2  text-white" />
@@ -27,7 +27,7 @@ const Footer = () => {
               <FaGithub className="h-8 w-8 hover:text-sky-500  hover:-mt-2 text-white" />
             </a>
             <a
-              href="https://www.facebook.com/profile.php?id=100011259456572"
+              href="https://www.facebook.com/mehedihasanfoysal8"
               target="blank"
             >
               <FaFacebook className="h-8 w-8  hover:text-sky-500  hover:-mt-2 text-white" />
@@ -35,7 +35,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
+    </div>
   );
 };
 

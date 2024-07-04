@@ -8,6 +8,7 @@ import {
 } from "react-icons/fa";
 import profile from "../assets/okay.jpg";
 import { SiMongodb, SiNextdotjs } from "react-icons/si";
+import { MdCastForEducation } from "react-icons/md";
 
 const About = () => {
   return (
@@ -17,7 +18,7 @@ const About = () => {
     >
       <div className="pt-28">
         <div className="max-w-screen-lg mx-auto">
-          <div className="flex flex-col lg:flex-row p-8 justify-center items-center gap-8 w-full pb-16">
+          <div className="flex flex-col lg:flex-row px-8 pt-8 justify-center items-center gap-8 w-full">
             <div className="lg:w-2/4 h-full">
               <img className="h-full rounded-lg" src={profile} alt="" />
             </div>
@@ -124,6 +125,37 @@ const About = () => {
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+          <div className="w-full md:pl-28 pb-24 px-6">
+            <h2 className="lg:text-[25px] text-[25px] text-[#0CB0D8] font-bold text-center pt-8 pb-4">
+              Education
+            </h2>
+            <div className="flex gap-4">
+              <MdCastForEducation className="mt-1" size={26} />
+              <div>
+                <h1>Running</h1>
+                <p className="text-lg font-semibold mt-2">
+                  CSE - University Of Scholars
+                </p>
+                <p className="text-[17px] font-medium mt-2">
+                  Studying Computer Science and Engineering at University Of
+                  Scholars
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-4 mt-8">
+              <MdCastForEducation className="mt-1" size={26} />
+              <div>
+                <h1>2019 - 2021</h1>
+                <p className="text-lg font-semibold mt-2">
+                  HSC - Gazipur Mahanagar College (GMC)
+                </p>
+                <p className="text-[17px] font-medium mt-2">
+                  Studied Higher Secondary School Certificate at Gazipur
+                  Mahanagar College (GMC)
+                </p>
               </div>
             </div>
           </div>

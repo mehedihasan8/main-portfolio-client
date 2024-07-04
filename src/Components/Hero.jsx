@@ -21,7 +21,7 @@ const Hero = () => {
   return (
     <div
       id="home"
-      className=" w-full bg-gradient-to-b from-black via-black to-gray-800 pt-8"
+      className="w-full bg-gradient-to-b from-black via-black to-gray-800 pt-8"
     >
       <div className="pt-10 lg:pt-20 max-w-screen-lg mx-auto flex flex-col justify-center items-center md:flex-row">
         <div className="flex flex-col justify-center flex-grow lg:mt-4 mb-0 md:mb-[14px]">

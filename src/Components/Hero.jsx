@@ -44,10 +44,11 @@ const Hero = () => {
             data-aos-duration="1000"
             className="text-gray-400 hover:text-white text-center md:text-left max-w-lg px-4 md:px-0"
           >
-            Hi there, I am Mehedi Hasan Foysal. A junior web developer and
+            Hi there, I am Mehedi Hasan Foysal. A Full-Stack web developer and
             Programmer. I love to explore new things. I am willing to accept
             challenges to improve myself more and more. Currently I love to work
-            on web applications using technologies like React, Tailwind css etc.
+            on web applications using technologies like React, Next js, Express,
+            Mongoose, Prisma, TypeScript, PostgreSql etc.
           </p>
           <div
             data-aos="fade-down-right"

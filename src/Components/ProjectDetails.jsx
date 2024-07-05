@@ -5,8 +5,9 @@ import { useParams } from "react-router-dom";
 const ProjectDetails = () => {
   const { id } = useParams();
   const [singleProjects, setSingleProjects] = useState();
+
   useEffect(() => {
-    fetch(`http://localhost:5000/api/projects/${id}`)
+    fetch(`https://protfolio-backend-eight.vercel.app/api/projects/${id}`)
       .then((res) => res.json())
       .then((data) => setSingleProjects(data?.data));
   }, [id]);
@@ -14,7 +15,6 @@ const ProjectDetails = () => {
     .split(".")
     .map((sentence) => sentence.trim())
     .filter((sentence) => sentence.length > 0);
-  console.log(singleProjects);
   return (
     <div
       id="projectditails"
